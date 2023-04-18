@@ -189,13 +189,15 @@
                                                                 <td> <%# Eval("Description") %> </td>
                                                                 <td> <%# Eval("CreatedDate") %> </td>
                                                                 <td>
-                                                                    <asp:LinkButton ID="lnkEdit" Text="Edit" runat="server" CssClass="badge badge-primary"
-                                                                        CommandArgument='<%# Eval("CategoryId") %>' CommandName="edit">
+                                                                    <asp:LinkButton ID="lnkEdit" Text="Edit" runat="server"
+                                                                        CssClass="badge badge-primary" CausesValidation="false"
+                                                                        CommandArgument='<%# Eval("ProductId") %>' CommandName="edit">
                                                                         <i class="ti-pencil"></i>
                                                                     </asp:LinkButton>
                                                                     <asp:LinkButton ID="lnkDelete" Text="Delete" runat="server" CommandName="delete"
-                                                                        CssClass="bage bg-danger" CommandArgument='<%# Eval("CategoryId") %>'
-                                                                        OnClientClick="return confirm('Do you want to delete this category?');"> 
+                                                                        CssClass="bage bg-danger" CommandArgument='<%# Eval("ProductId") %>'
+                                                                        OnClientClick="return confirm('Do you want to delete this product?');"
+                                                                        CausesValidation="false">
                                                                         <i class="ti-trash"></i>
                                                                     </asp:LinkButton>
                                                                 </td>
